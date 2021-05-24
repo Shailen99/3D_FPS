@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift))
         {
           speed = sprintSpeed;
-          Debug.Log("sprint bby");
         }
         else{
           speed = walkSpeed;
