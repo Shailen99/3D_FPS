@@ -9,12 +9,6 @@ public class DisplayWeapon : MonoBehaviour
   public GameObject WorldSword;
   public Text DisplaySwordText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -12,10 +12,6 @@ public class WanderAI : MonoBehaviour
   private bool isRotatingLeft = false;
   private bool isRotatingRight= false;
   private bool isWalking = false;
-    // Start is called before the first frame update
-    void Start()
-{
-    }
 
     // Update is called once per frame
     void Update()
