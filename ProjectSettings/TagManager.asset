@@ -7,6 +7,8 @@ TagManager:
   - Melee
   - Villager
   - Sword
+  - InteractiveDoor
+  - VillagerLocationQuest
   layers:
   - Default
   - TransparentFX
