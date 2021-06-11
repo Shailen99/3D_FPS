@@ -9,6 +9,8 @@ TagManager:
   - Sword
   - InteractiveDoor
   - VillagerLocationQuest
+  - LocationQuestPackage
+  - Bartender
   layers:
   - Default
   - TransparentFX

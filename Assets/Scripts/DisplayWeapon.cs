@@ -12,24 +12,19 @@ public class DisplayWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKeyDown(KeyCode.E))
+      if (Input.GetKeyDown(KeyCode.I))
       {
-            if(WorldSword.activeSelf == true)
+            if(WorldSword.activeSelf == false)
             {
-
-            }
-            else if(WorldSword.activeSelf == false)
-            {
-
                 if(ActiveSword.activeSelf)
                 {
                   ActiveSword.SetActive(false);
-                  DisplaySwordText.text = "Press E to Show Weapon";
+                  DisplaySwordText.text = "Press I to Show Weapon";
                 }
                 else
                 {
                   ActiveSword.SetActive(true);
-                  DisplaySwordText.text = "Press E to Hide Weapon";
+                  DisplaySwordText.text = "Press I to Hide Weapon";
                 }
               }
             }
