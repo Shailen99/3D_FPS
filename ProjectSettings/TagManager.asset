@@ -11,6 +11,9 @@ TagManager:
   - VillagerLocationQuest
   - LocationQuestPackage
   - Bartender
+  - Enemy
+  - EnemyEvent
+  - BountyBoard
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Bed
   - 
   - 
   - 
