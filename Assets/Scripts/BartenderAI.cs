@@ -9,6 +9,7 @@ public class BartenderAI : MonoBehaviour
   public Text DialogueText;
 
   public MoneyManager PlayerMM;
+  public bool isBuyingDrink = false;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider Bartender)
    {
@@ -17,6 +18,7 @@ public class BartenderAI : MonoBehaviour
          //Introduce Dialogue for telling players to buy drinks
          DialogueBox.SetActive(true);
          DialogueText.text = "Hey, what can I get you? A drink is $5. (Press Y to buy a drink or N to leave)";
+         isBuyingDrink = true;
       //   DialogueConfirmText.text = "Press Y to buy a drink or N to leave";
      }
    }
@@ -29,15 +31,21 @@ public class BartenderAI : MonoBehaviour
        //Check if they have enough money
        if(PlayerMM.currentGold >= 5)
        {
+         if(isBuyingDrink == true)
+         {
          PlayerMM.RemoveMoney(5);
          DialogueBox.SetActive(false);
+         isBuyingDrink = false;
+       }
        }
        else if(PlayerMM.currentGold < 5)
        {
+         if(isBuyingDrink == true)
+         {
          DialogueText.text = "Sorry, you don't have enough money.";
   //       yield return new WaitForSeconds(10);
           StartCoroutine(WaitToSetFalse());
-
+        }
     //     DialogueBox.SetActive(false);
 
        }

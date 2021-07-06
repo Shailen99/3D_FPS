@@ -11,7 +11,7 @@ public class MoneyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      currentGold = 20;
+      currentGold = 1005;
 
     moneyText.text = "Wallet: $" + currentGold;
     }
