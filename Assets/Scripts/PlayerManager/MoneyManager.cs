@@ -11,14 +11,14 @@ public class MoneyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      currentGold = 1005;
+      currentGold = 0;
 
     moneyText.text = "Wallet: $" + currentGold;
     }
 
     public void AddMoney(int goldToAdd)
     {
-      currentGold += goldToAdd;
+      currentGold = goldToAdd + currentGold;
       moneyText.text = "Wallet: $" + currentGold;
     }
 

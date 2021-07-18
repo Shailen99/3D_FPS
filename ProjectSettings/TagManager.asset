@@ -15,6 +15,7 @@ TagManager:
   - EnemyEvent
   - BountyBoard
   - NPCHunter
+  - DrivableVehicle
   layers:
   - Default
   - TransparentFX
