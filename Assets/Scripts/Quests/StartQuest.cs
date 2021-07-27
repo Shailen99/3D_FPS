@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class StartQuest : MonoBehaviour
 {
+  public PlayerMovement playerMovement;
 
   public GameObject NPCDialogueManager;
   public Text NPCDialogueText;
@@ -31,14 +32,14 @@ public class StartQuest : MonoBehaviour
     {
       if (isPackageFound == false && isStartingDialogueFinished == false)
       {
+
       NPCDialogueManager.SetActive(true);
       QuestIndicator.SetActive(false);
       LocationQuestActivated = true;
 
       NPCDialogueText.text = EntryDialogueLines[currentLine] + " (Press X to Continue)";
     }
-
-    if (isPackageFound == true && isStartingDialogueFinished == true  )
+    else if (isPackageFound == true && isStartingDialogueFinished == true  )
     {
       NPCDialogueManager.SetActive(true);
       NPCDialogueText.text = "Thanks for finding the package, here's your reward.";
@@ -47,8 +48,8 @@ public class StartQuest : MonoBehaviour
       isPackageFound = false;
       RewardIndicator.SetActive(false);
     }
-    }
   }
+}
 
     // Update is called once per frame
     void Update()
@@ -68,6 +69,8 @@ public class StartQuest : MonoBehaviour
         if(NPCDialogueText.text == EntryDialogueLines[2])
         {
           isStartingDialogueFinished = true;
+          playerMovement.walkSpeed = 8f;
+          playerMovement.sprintSpeed = 12f;
 
           StartCoroutine(WaitToSetFalse());
           //Activate Package

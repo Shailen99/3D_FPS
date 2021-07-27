@@ -16,6 +16,8 @@ TagManager:
   - BountyBoard
   - NPCHunter
   - DrivableVehicle
+  - ArcadeMachine
+  - TalkableNPC
   layers:
   - Default
   - TransparentFX

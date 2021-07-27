@@ -36,15 +36,16 @@ public class BartenderAI : MonoBehaviour
          PlayerMM.RemoveMoney(5);
          DialogueBox.SetActive(false);
          isBuyingDrink = false;
+
        }
        }
        else if(PlayerMM.currentGold < 5)
        {
          if(isBuyingDrink == true)
          {
-         DialogueText.text = "Sorry, you don't have enough money.";
   //       yield return new WaitForSeconds(10);
           StartCoroutine(WaitToSetFalse());
+
         }
     //     DialogueBox.SetActive(false);
 
@@ -52,7 +53,6 @@ public class BartenderAI : MonoBehaviour
      }
      else if(Input.GetKeyDown(KeyCode.N))
      {
-       Debug.Log("You have not bought a drink and left");
        DialogueBox.SetActive(false);
 
      }

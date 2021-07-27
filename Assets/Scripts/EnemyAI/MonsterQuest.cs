@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MonsterQuest : MonoBehaviour
 {
+  public PlayerMovement playerMovement;
+
   public GameObject DialogueBox;
   public Text DialogueText;
   public bool QuestActivated = false;
@@ -20,7 +22,7 @@ public class MonsterQuest : MonoBehaviour
          //Introduce Dialogue for telling players to buy drinks
          DialogueBox.SetActive(true);
          DialogueText.text = "Accept Monster Quest at Village Entrance (Press Y to Accept or N to leave)";
-         QuestActivated = true;
+      //   QuestActivated = true;
       //   DialogueConfirmText.text = "Press Y to buy a drink or N to leave";
     }
      }
@@ -34,11 +36,17 @@ public class MonsterQuest : MonoBehaviour
       {
           DialogueBox.SetActive(false);
           EnemyEventActivator.SetActive(true);
+          playerMovement.walkSpeed = 8f;
+          playerMovement.sprintSpeed = 12f;
+          QuestActivated = true;
         }
 
       else if(Input.GetKeyDown(KeyCode.N))
       {
         DialogueBox.SetActive(false);
+        playerMovement.walkSpeed = 8f;
+        playerMovement.sprintSpeed = 12f;
+
       }
 
     }

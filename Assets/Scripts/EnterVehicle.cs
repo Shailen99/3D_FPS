@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnterVehicle : MonoBehaviour
 {
@@ -12,12 +13,14 @@ public class EnterVehicle : MonoBehaviour
   public bool isDrivingActive = false;
   //ActivateSign
   public GameObject ActivateSign;
+  public Text ActiveText;
   public bool CanDrive = false;
   private void OnTriggerEnter(Collider Car)
   {
     if(Car.tag == "DrivableVehicle")
     {
       ActivateSign.SetActive(true);
+      ActiveText.text = "Press X to Drive Vehicle";
       CanDrive = true;
     }
   }

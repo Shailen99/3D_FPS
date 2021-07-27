@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HunterGunAI : MonoBehaviour
 {
+  public PlayerMovement playerMovement;
 
   public GameObject DialogueBox;
   public Text DialogueText;
@@ -24,6 +25,7 @@ public class HunterGunAI : MonoBehaviour
    {
      if(GunBought == false)
      {
+
      DialogueBox.SetActive(true);
      DialogueText.text = "Hey buddy, you look like a tough guy. I can get you a nice pistol for just a grand. (Press Y to buy a weapon or N to leave)";
      isBuyingWeapon = true;
@@ -49,11 +51,17 @@ public class HunterGunAI : MonoBehaviour
              UserPistol.SetActive(true);
              GunHolder.SetActive(true);
              SwordCheck.ActiveSword.SetActive(false);
+             playerMovement.walkSpeed = 8f;
+             playerMovement.sprintSpeed = 12f;
+
             }
             else{
               UserPistol.SetActive(true);
               GunHolder.SetActive(true);
               SwordCheck.ActiveSword.SetActive(false);
+              playerMovement.walkSpeed = 8f;
+              playerMovement.sprintSpeed = 12f;
+
             }
              GunBought = true;
            }
@@ -64,12 +72,18 @@ public class HunterGunAI : MonoBehaviour
              {
              DialogueText.text = "Dont try and scam me mate, you don't have enough money for a sandwich, let alone a gun.";
               StartCoroutine(WaitToSetFalse());
+              playerMovement.walkSpeed = 8f;
+              playerMovement.sprintSpeed = 12f;
+
               }
            }
          }
          else if(Input.GetKeyDown(KeyCode.N))
          {
            DialogueBox.SetActive(false);
+           playerMovement.walkSpeed = 8f;
+           playerMovement.sprintSpeed = 12f;
+
          }
        }
 
