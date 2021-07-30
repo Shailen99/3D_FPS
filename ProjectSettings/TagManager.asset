@@ -7,7 +7,6 @@ TagManager:
   - Melee
   - Villager
   - Sword
-  - InteractiveDoor
   - VillagerLocationQuest
   - LocationQuestPackage
   - Bartender
@@ -18,6 +17,7 @@ TagManager:
   - DrivableVehicle
   - ArcadeMachine
   - TalkableNPC
+  - Drone
   layers:
   - Default
   - TransparentFX

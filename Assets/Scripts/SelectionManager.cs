@@ -40,7 +40,7 @@ public class SelectionManager : MonoBehaviour
        }
 
 
-      if (Input.GetKeyDown(KeyCode.X) && ActivateSign.activeSelf)
+      if (Input.GetKeyDown(KeyCode.X) && ActivateSign.activeSelf && ActiveText.text == "Press X to Talk")
         {
         ActivateSign.SetActive(false);
         //Activate Dialogue

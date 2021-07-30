@@ -36,11 +36,11 @@ public class BartenderAI : MonoBehaviour
          PlayerMM.RemoveMoney(5);
          DialogueBox.SetActive(false);
          isBuyingDrink = false;
-
        }
        }
-       else if(PlayerMM.currentGold < 5)
+       else
        {
+         Debug.Log("Drink cant be buy");
          if(isBuyingDrink == true)
          {
   //       yield return new WaitForSeconds(10);
@@ -48,7 +48,6 @@ public class BartenderAI : MonoBehaviour
 
         }
     //     DialogueBox.SetActive(false);
-
        }
      }
      else if(Input.GetKeyDown(KeyCode.N))
@@ -60,6 +59,8 @@ public class BartenderAI : MonoBehaviour
 
    IEnumerator WaitToSetFalse()
    {
+     DialogueText.text = "Sorry, it's pay to drink";
+
     //yield on a new YieldInstruction that waits for 5 seconds.
     yield return new WaitForSeconds(5);
     DialogueBox.SetActive(false);
