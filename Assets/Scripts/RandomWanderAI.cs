@@ -19,6 +19,7 @@ public class RandomWanderAI : MonoBehaviour
     {
 
       navMeshAgent.destination = movePositionTransform[currentPath].position;
+
       if (!navMeshAgent.pathPending)
       {
       if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
@@ -28,13 +29,14 @@ public class RandomWanderAI : MonoBehaviour
             if(currentPath < movePositionTransform.Length)
             {
               currentPath++;
+              if(currentPath == movePositionTransform.Length)
+              {
+                currentPath = 0;
+              }
             }
-            else
-            {
-              currentPath = 0;
-            }
+
           }
       }
-  }
     }
+  }
 }

@@ -51,7 +51,7 @@ public class BranchingDialogueSystem : MonoBehaviour
         PlayerTextBox3.text = "";
         StartCoroutine(WaitToSetFalse());
       }
-      else if (!isEntryBranchOpen && Input.GetKeyDown(KeyCode.Alpha3) && !isSecondaryBranchOpen)
+      else if (isEntryBranchOpen && Input.GetKeyDown(KeyCode.Alpha3) && !isSecondaryBranchOpen)
       {
         NPCDialogueBox.text = "A few, some transporters are near the gas station and the mayors alway looking for more minimum wage workers.";
         PlayerTextBox1.text = "Thanks and Goodbye!";
@@ -100,11 +100,11 @@ public class BranchingDialogueSystem : MonoBehaviour
   IEnumerator WaitToSetFalse()
   {
    //yield on a new YieldInstruction that waits for 5 seconds.
-   yield return new WaitForSeconds(5);
+   yield return new WaitForSeconds(3);
    DialogueManager.SetActive(false);
    isEntryBranchOpen = false;
    isSecondaryBranchOpen = false;
-
+   DialogueSystemIsActive = false;
    }
 
 }

@@ -18,6 +18,8 @@ TagManager:
   - ArcadeMachine
   - TalkableNPC
   - Drone
+  - LockedDoor
+  - HotelOwner
   layers:
   - Default
   - TransparentFX
