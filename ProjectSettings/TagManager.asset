@@ -20,6 +20,9 @@ TagManager:
   - Drone
   - LockedDoor
   - HotelOwner
+  - DestroyableObject
+  - DrugDealerQuest
+  - DrugReceiverQuest
   layers:
   - Default
   - TransparentFX

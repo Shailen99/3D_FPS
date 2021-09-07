@@ -27,6 +27,7 @@ public class SelectionManager : MonoBehaviour
     if (Physics.Raycast (ray,out hit,TargetDistance)) {
          Debug.Log("You selected the " + hit.transform.name); // check you picked right object
 
+//TalkableNPC
          //Check if NPC is interacted with
          if(hit.transform.tag == "TalkableNPC" && !isDialogueAlreadyActive)
          {
@@ -34,12 +35,8 @@ public class SelectionManager : MonoBehaviour
            ActiveText.text = "Press X to Talk";
            isDialogueAlreadyActive = true;
            }
-
          }
-
        }
-
-
       if (Input.GetKeyDown(KeyCode.X) && ActivateSign.activeSelf && ActiveText.text == "Press X to Talk")
         {
         ActivateSign.SetActive(false);

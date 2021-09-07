@@ -12,6 +12,8 @@ public class ActivateEnemyFight : MonoBehaviour
 
   public MoneyManager PlayerMM;
   public MonsterQuest CheckQuest;
+  public QuestManager questManager;
+
 
   private void OnTriggerEnter(Collider EventActivator)
   {
@@ -37,6 +39,9 @@ public class ActivateEnemyFight : MonoBehaviour
           PlayerMM.AddMoney(200);
           CheckQuest.QuestFinished = true;
         }
+        int questindex = questManager.CheckQuestIndex("Kill Enemy");
+        questManager.Quests[questindex].questTasks = "Quest is Finished";
+
       }
 
     }

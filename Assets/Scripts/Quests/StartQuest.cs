@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 
 
-public class StartQuest : MonoBehaviour
+public class StartLocationQuest : MonoBehaviour
 {
   public PlayerMovement playerMovement;
-
+  public Quest startQuest;
+  public QuestManager questManager;
   public GameObject NPCDialogueManager;
   public Text NPCDialogueText;
   public string[] EntryDialogueLines;
@@ -47,6 +48,9 @@ public class StartQuest : MonoBehaviour
       PlayerMM.AddMoney(1000);
       isPackageFound = false;
       RewardIndicator.SetActive(false);
+      int questindex = questManager.CheckQuestIndex("Find Package");
+      questManager.Quests[questindex].questTasks = "Quest is Finished";
+
     }
   }
 }
@@ -69,16 +73,20 @@ public class StartQuest : MonoBehaviour
         if(NPCDialogueText.text == EntryDialogueLines[2])
         {
           isStartingDialogueFinished = true;
-          playerMovement.walkSpeed = 8f;
+        /*  playerMovement.walkSpeed = 8f;
           playerMovement.sprintSpeed = 12f;
-
+*/
           StartCoroutine(WaitToSetFalse());
           //Activate Package
           LocationQuestActivated = false;
           PackageActivated.ActivatePackage();
-        }
+          //Add to Quest Manager
+          startQuest = new Quest("Find Package","Find a package near the top of the mountain","Go to the Giant Skull and Get the Package" );
+          questManager.AddQuest(startQuest);
 
-      }
+          }
+
+        }
       }
 
     }

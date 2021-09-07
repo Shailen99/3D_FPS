@@ -20,11 +20,8 @@ public class ShootGun : MonoBehaviour
 
   [Header("Drone")]
   public DestroyDrone droneDestruction;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+  [Header("DestroyableObjects")]
+  public destroyableObject ObjectToDestroy;
 
     // Update is called once per frame
     void Update()
@@ -49,12 +46,17 @@ public class ShootGun : MonoBehaviour
           {
             target.HurtEnemy(Damage);
           }
-          Debug.Log("You selected the " + hit.transform.name + "with gun "); // check you picked right object
+          //Destroy Drone
           if(hit.transform.tag == "Drone")
           {
-            droneDestruction = hit.transform.GetComponent<DestroyDrone>();
+            droneDestruction = hit.transform.GetComponent<DestroyDrone>(); //Get Class from selected object
             //playparticlesystem
             droneDestruction.BlowUpDrone();
+          }
+          if(hit.transform.tag == "DestroyableObject")
+          {
+            ObjectToDestroy = hit.transform.GetComponent<destroyableObject>();//Get Class from selected object
+            ObjectToDestroy.destroyTheObject(); //Run function
           }
         }
     }

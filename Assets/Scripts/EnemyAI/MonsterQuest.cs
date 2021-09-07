@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class MonsterQuest : MonoBehaviour
 {
-  public PlayerMovement playerMovement;
 
   public GameObject DialogueBox;
   public Text DialogueText;
   public bool QuestActivated = false;
   public bool QuestFinished = false;
   public GameObject EnemyEventActivator;
+
+  public Quest enemyQuest;
+  public QuestManager questManager;
+
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider BountyBoard)
    {
@@ -22,9 +25,7 @@ public class MonsterQuest : MonoBehaviour
          //Introduce Dialogue for telling players to buy drinks
          DialogueBox.SetActive(true);
          DialogueText.text = "Accept Monster Quest at Village Entrance (Press Y to Accept or N to leave)";
-      //   QuestActivated = true;
-      //   DialogueConfirmText.text = "Press Y to buy a drink or N to leave";
-    }
+       }
      }
    }
 
@@ -32,21 +33,20 @@ public class MonsterQuest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKeyDown(KeyCode.Y))
+      if (Input.GetKeyDown(KeyCode.Y) && DialogueBox.activeSelf)
       {
           DialogueBox.SetActive(false);
           EnemyEventActivator.SetActive(true);
-          playerMovement.walkSpeed = 8f;
-          playerMovement.sprintSpeed = 12f;
           QuestActivated = true;
+
+          //Add to Quest Manager
+          enemyQuest = new Quest("Kill Enemy","Take Over the Raider Base","Go to the Raider Base and Kill All Enemies" );
+          questManager.AddQuest(enemyQuest);
         }
 
-      else if(Input.GetKeyDown(KeyCode.N))
+      else if(Input.GetKeyDown(KeyCode.N) && DialogueBox.activeSelf)
       {
         DialogueBox.SetActive(false);
-        playerMovement.walkSpeed = 8f;
-        playerMovement.sprintSpeed = 12f;
-
       }
 
     }
