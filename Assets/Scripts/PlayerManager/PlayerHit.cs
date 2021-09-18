@@ -7,7 +7,7 @@ public class PlayerHit : MonoBehaviour
   public int damageToGive = 5;
   public PlayerHealthManager PlayerHealth;
   private void OnTriggerEnter(Collider Enemy)
-{
+  {
   if(Enemy.tag == "Enemy")
   {
     PlayerHealth.HurtPlayer(damageToGive);

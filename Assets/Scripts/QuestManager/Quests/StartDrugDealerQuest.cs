@@ -64,7 +64,7 @@ public class StartDrugDealerQuest : MonoBehaviour
       {
         if(DrugDealerQuestActivated)
         {
-          if(currentLine > 2)
+          if(currentLine < 2)
           {
             currentLine++;
           }

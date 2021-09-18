@@ -15,6 +15,9 @@ public class EnterVehicle : MonoBehaviour
   public GameObject ActivateSign;
   public Text ActiveText;
   public bool CanDrive = false;
+
+  //Hide Dialogue Boxes
+  public GameObject[] DialogueBoxes;
   private void OnTriggerEnter(Collider Car)
   {
     if(Car.tag == "DrivableVehicle")
@@ -52,13 +55,22 @@ public class EnterVehicle : MonoBehaviour
         {
           CarCamera.SetActive(true);
           //set player to false
+          HidePlayerGUI();
           Player.SetActive(false);
-          UserGUI.SetActive(false);
           DrivingGUI.SetActive(true);
           Car.gameObject.GetComponent<CarController>().enabled = true;
 
         }
       }
 
+    }
+
+    public void HidePlayerGUI()
+    {
+      UserGUI.SetActive(false);
+      for(int i = 0; i < DialogueBoxes.Length; i++)
+      {
+        DialogueBoxes[i].SetActive(false);
+      }
     }
 }
