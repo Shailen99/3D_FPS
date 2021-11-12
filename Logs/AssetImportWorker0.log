@@ -166,3 +166,19 @@ System memory in use after: 308.2 MB.
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3013.
 Total: 1.371375 ms (FindLiveObjects: 0.131542 ms CreateObjectMapping: 0.046791 ms MarkObjects: 1.179750 ms  DeleteObjects: 0.012292 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1994.544913 seconds.
+  path: Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainBrushes/terrainstamp_volcano01.brush
+  artifactKey: Guid(e5a2f11e9d7a4da4caf17b3e59800215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainBrushes/terrainstamp_volcano01.brush using Guid(e5a2f11e9d7a4da4caf17b3e59800215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df254c0b897e18eb0d724ceaecc8d112') in 0.987449 seconds
+  Import took 1.140145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.372984 seconds.
+  path: Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainBrushes/terrainstamp_canyon02.brush
+  artifactKey: Guid(7ddc1e59f6e82cc4693b55b0badb4aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainBrushes/terrainstamp_canyon02.brush using Guid(7ddc1e59f6e82cc4693b55b0badb4aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e77a28b7fdc5049434fd77173bb3d63c') in 0.018178 seconds
+  Import took 0.022432 seconds .
+
