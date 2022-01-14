@@ -15,7 +15,7 @@ public class StartDrugDealerQuest : MonoBehaviour
   public bool DrugDealerQuestActivated = false;
   public bool isStartingDialogueFinished = false;
   public bool hasReachedTarget = false;
-
+  public bool DrugDealerTouched = false;
   public MoneyManager PlayerMM;
 
   int currentLine = 0;
@@ -62,7 +62,7 @@ public class StartDrugDealerQuest : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.X))
       {
-        if(DrugDealerQuestActivated)
+        if(DrugDealerQuestActivated && isStartingDialogueFinished == false)
         {
           if(currentLine < 2)
           {

@@ -18,7 +18,7 @@ public class StartQuest : MonoBehaviour
   public GameObject RewardIndicator;
 
   public bool LocationQuestActivated = false;
-
+  public bool collision = false;//Check if objects have collided
   int currentLine = 0;
 
   public PackageFound PackageActivated;
@@ -35,7 +35,7 @@ public class StartQuest : MonoBehaviour
     {
       if (isPackageFound == false && isStartingDialogueFinished == false)
       {
-
+        collision = true;
       NPCDialogueManager.SetActive(true);
       QuestIndicator.SetActive(false);
       LocationQuestActivated = true;
@@ -52,7 +52,7 @@ public class StartQuest : MonoBehaviour
       RewardIndicator.SetActive(false);
       int questindex = questManager.CheckQuestIndex("Find Package");
       questManager.Quests[questindex].questTasks = "Quest is Finished";
-
+      collision = true;
     }
   }
 }
@@ -60,9 +60,10 @@ public class StartQuest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      currentLine = 0;
       if (Input.GetKeyDown(KeyCode.X))
       {
-        if(LocationQuestActivated )
+        if(LocationQuestActivated && isPackageFound == false && isStartingDialogueFinished == false)
         {
         currentLine++;
         if(currentLine == 1)

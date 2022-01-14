@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 471}
   m_MaxSize: {x: 14001, y: 14021}
   vertical: 0
-  controlID: 7585
+  controlID: 151
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 7586
+  controlID: 102
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 7587
+  controlID: 46
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c6adffff28b7ffff4cb7ffff52fbffffae5200008a5700002e5900002c5b0000dc5b00006a630000a46b0000c26e00006c700000187300007a750000f47c00006e7d0000e6800000d481000036820000d48400005685000052880000868a00008a8a0000ee8c0000f68c0000788d0000ae8d0000209000003e920000d2940000
+      m_ExpandedIDs: 18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -307,9 +307,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -184.70229, y: 9.209383, z: -309.22}
+    m_Target: {x: -166.61147, y: 18.988424, z: -202.5385}
     speed: 2
-    m_Value: {x: -184.70229, y: 9.209383, z: -309.22}
+    m_Value: {x: -166.61147, y: 18.988424, z: -202.5385}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -356,13 +356,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.36768556, y: 0.60275704, z: -0.36526448, w: -0.60676026}
+    m_Target: {x: -0.11049052, y: -0.78236943, z: 0.14499244, w: -0.59561837}
     speed: 2
-    m_Value: {x: -0.36766994, y: 0.60273147, z: -0.36524898, w: -0.6067345}
+    m_Value: {x: -0.11048532, y: -0.7823326, z: 0.14498562, w: -0.5955903}
   m_Size:
-    m_Target: 3.254379
+    m_Target: 1.6114898
     speed: 2
-    m_Value: 3.254379
+    m_Value: 1.6114898
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -406,8 +406,8 @@ MonoBehaviour:
     y: 428
     width: 1100
     height: 295
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -452,22 +452,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/Materials
+    - Assets/Scripts/QuestManager/Quests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/Materials
+  - Assets/Scripts/QuestManager/Quests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/shailensheth/MyFirstGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 50}
-    m_SelectedIDs: 629e0000
-    m_LastClickedID: 40546
-    m_ExpandedIDs: 00000000cc9d0000ce9d0000d09d0000d29d0000549e000000ca9a3b
+    scrollPos: {x: 0, y: 162}
+    m_SelectedIDs: fe9e0000
+    m_LastClickedID: 40702
+    m_ExpandedIDs: 000000005c9e00005e9e0000609e0000629e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,7 +495,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000cc9d0000ce9d0000d09d0000d29d000000ca9a3b
+    m_ExpandedIDs: 000000005c9e00005e9e0000609e0000629e0000649e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
