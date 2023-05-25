@@ -75,7 +75,7 @@ public class StartLocationQuest : MonoBehaviour
           isStartingDialogueFinished = true;
         /*  playerMovement.walkSpeed = 8f;
           playerMovement.sprintSpeed = 12f;
-*/
+          */
           StartCoroutine(WaitToSetFalse());
           //Activate Package
           LocationQuestActivated = false;

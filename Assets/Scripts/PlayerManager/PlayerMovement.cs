@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
       speed = walkSpeed;
 
-      //Check if player is grounedd
+      //Check if player is grounded
       isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
       if(isGrounded && velocity.y < 0)
       {

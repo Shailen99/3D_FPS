@@ -8,3 +8,7 @@
 - 3D Modeling
 - Animation
 - Driving Mechanics
+-Writing and Dialogue Systems
+
+Current Game Progress:
+https://youtu.be/pIVHB3NRwbQ

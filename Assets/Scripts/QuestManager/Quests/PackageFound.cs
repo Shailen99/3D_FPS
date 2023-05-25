@@ -7,7 +7,7 @@ public class PackageFound : MonoBehaviour
   public bool isPackageActivated = false;
   public GameObject Package;
   public bool PackageCollected = false;
-  public StartQuest checkPackageFound;
+  public StartLocationQuest checkPackageFound;
   public GameObject RewardIndicator;
   public QuestManager questManager;
 
